@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 40% 98%; /* slate-50 */
+    --foreground: 222.2 47.4% 11.2%; /* slate-900 */
+
+    --card: 0 0% 100%; /* white */
+    --card-foreground: 222.2 47.4% 11.2%; /* slate-900 */
+
+    --popover: 0 0% 100%; /* white */
+    --popover-foreground: 222.2 47.4% 11.2%; /* slate-900 */
+
+    --primary: 222.2 47.4% 11.2%; /* slate-900 */
+    --primary-foreground: 0 0% 100%; /* white */
+
+    --secondary: 214.3 31.8% 91.4%; /* slate-200 */
+    --secondary-foreground: 222.2 47.4% 11.2%; /* slate-900 */
+
+    --muted: 210 40% 96.1%; /* slate-100 */
+    --muted-foreground: 215 16.3% 46.9%; /* slate-500 */
+
+    --accent: 214.3 31.8% 91.4%; /* slate-200 */
+    --accent-foreground: 222.2 47.4% 11.2%; /* slate-900 */
+
+    --destructive: 0 84.2% 60.2%; /* red-500 */
+    --destructive-foreground: 0 0% 100%; /* white */
+
+    --border: 214.3 31.8% 91.4%; /* slate-200 */
+    --input: 214.3 31.8% 91.4%; /* slate-200 */
+    --ring: 222.2 47.4% 11.2%; /* slate-900 */
+
+    --radius: 0rem; /* sharp edges */
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%; /* slate-950 */
+    --foreground: 210 40% 98%; /* slate-50 */
+
+    --card: 222.2 47.4% 11.2%; /* slate-900 */
+    --card-foreground: 210 40% 98%; /* slate-50 */
+
+    --popover: 222.2 47.4% 11.2%; /* slate-900 */
+    --popover-foreground: 210 40% 98%; /* slate-50 */
+
+    --primary: 210 40% 98%; /* slate-50 */
+    --primary-foreground: 222.2 84% 4.9%; /* slate-950 */
+
+    --secondary: 217.2 32.6% 17.5%; /* slate-800 */
+    --secondary-foreground: 210 40% 98%; /* slate-50 */
+
+    --muted: 217.2 32.6% 17.5%; /* slate-800 */
+    --muted-foreground: 215 20.2% 65.1%; /* slate-400 */
+
+    --accent: 217.2 32.6% 17.5%; /* slate-800 */
+    --accent-foreground: 210 40% 98%; /* slate-50 */
+
+    --destructive: 0 62.8% 30.6%; /* red-900 */
+    --destructive-foreground: 210 40% 98%; /* slate-50 */
+
+    --border: 217.2 32.6% 17.5%; /* slate-800 */
+    --input: 217.2 32.6% 17.5%; /* slate-800 */
+    --ring: 210 40% 98%; /* slate-50 */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased selection:bg-primary/20 selection:text-primary;
+    min-height: 100vh;
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: hsl(var(--background));
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--muted));
+  border-radius: 9999px;
+}
